@@ -20,7 +20,7 @@ const Body = () => {
 	) : (
 		<>
 			<div className='searchBar'>
-				<input type='text' placeholder='search restaurants/food' value={searchtext} onChange={(e) => setSearchtext(e.target.value)} />
+				<input type='text' placeholder='search restaurants' value={searchtext} onChange={(e) => setSearchtext(e.target.value)} />
 			</div>
 			<hr />
 			<div className='restaurants'>

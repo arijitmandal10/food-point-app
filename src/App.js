@@ -8,6 +8,7 @@ import { About } from './pages/about';
 import { Cart } from './pages/cart';
 import { Contact } from './pages/contact';
 import RestaurantMenu from './components/RestaurantMenu';
+import Error from './pages/error';
 
 const AppLayout = () => {
 	return (
@@ -24,6 +25,7 @@ function App() {
 		{
 			path: '/',
 			element: <AppLayout />,
+			errorElement: <Error />,
 			children: [
 				{
 					path: '/',
