@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -9,6 +10,8 @@ const Navbar = () => {
 		setIsLoggedIn(!isLoggedIn);
 		setButtonColor(isLoggedIn ? '#aeff9f' : '#ff3b3b');
 	};
+
+	const cartItems = useSelector((store) => store.cart.items);
 	return (
 		<nav>
 			<Link to='/'>
@@ -33,7 +36,7 @@ const Navbar = () => {
 				</li>
 				<li>
 					{' '}
-					<Link to='/cart'>Cart</Link>
+					<Link to='/cart'>Cart-{cartItems.length}</Link>
 				</li>
 				<li>
 					<button onClick={handleToggle} style={{ backgroundColor: buttonColor }}>

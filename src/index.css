@@ -1,12 +1,13 @@
+html,
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
 		'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	/* fallback for old browsers */
+	height: 100%;
 	background: linear-gradient(to right, #c9f8d8a3, #ffd4d4);
+	min-width: fit-content;
 }
 
 code {
@@ -35,16 +36,19 @@ nav > ul {
 }
 ul > li {
 	padding: 10px;
+	transition: transform 0.3s ease;
 }
 
+ul > li:hover {
+	transform: scale(1.1);
+}
 ul > li > a {
 	text-decoration: none;
 	font-size: larger;
 	color: brown;
 }
-ul > li > a:hover {
-	color: #ff0000a1;
-}
+/* ul > li > a:hover {
+	/* color: #ff0000a1; } */
 ul > li > button {
 	border: none;
 	height: 31px;
@@ -60,7 +64,8 @@ ul > li > button:hover {
 .restaurants {
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: 50px;
+	/* margin-left: 50px; */
+	justify-content: center;
 }
 
 .shimmerCard {
@@ -90,24 +95,29 @@ ul > li > button:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	width: 263px;
+	width: 227px;
 	margin: 37px;
-	min-height: 24em;
+	min-height: 21em;
 	margin-bottom: 3em;
 	/* border: 1px solid black; */
 	background-color: #ffffff8c;
-	padding: 10px;
+	padding: 17px;
 	padding-bottom: 0px;
-	padding-top: 0px;
+	padding-top: 4px;
+	border-bottom: 1px solid black;
+	border-radius: 10px;
+	transition: transform 0.3s ease;
 
 	/* border-radius: 10px; */
-	border-bottom-style: solid;
+	/* border-bottom-style: solid; */
 }
 .restaurantCard:hover {
-	box-shadow: -1px 4px 17px 3px black;
+	/* box-shadow: -1px 4px 17px 3px black; */
+	transform: scale(1.1);
 }
 .restaurantCard > img {
-	height: 14em;
+	height: 10em;
+	width: 15em;
 	margin: -6px;
 }
 
@@ -133,15 +143,26 @@ input {
 	margin: 10px;
 	height: 36px;
 }
-
+.card-bottom {
+	display: flex;
+	font-size: 18px;
+	margin-bottom: -26px;
+	justify-content: space-between;
+}
 h5 {
-	margin: 0px;
-	/* background-color: #ff1414; */
-	width: 60px;
-	color: red;
-	font-size: 15px;
-	padding-left: 2px;
-	margin-bottom: 11px;
+	background-color: #ff1414;
+	width: 36px;
+	color: white;
+
+	font-size: 13px;
+	margin-bottom: 25px;
+	padding: 2px;
+	border-radius: 6px;
+}
+.restaurantCard h3 {
+	margin-top: 0px;
+	font-family: math;
+	font-size: 21px;
 }
 
 /* Shimmer Menu Card CSS Start */
@@ -204,24 +225,22 @@ h5 {
 
 /* restaurant menu css */
 .restaurant-menu {
-	margin-top: 80px;
+	margin-top: -76px;
 	min-height: 80vh;
 	width: auto;
 }
 .restaurant-summary {
-	width: 58%;
 	margin: 0px auto;
 	padding: 10px;
 	display: flex;
-	height: 240px;
+	height: 200px;
 	gap: 36px;
-	/* justify-content: space-around; */
+	justify-content: center;
 	align-items: center;
 	background-color: var(--light-black);
 	color: var(--white);
 	box-shadow: 1px 1px 15px black;
-	background: #d6f4a6;
-	border-radius: 10px;
+	background: #000000;
 }
 .restaurant-img {
 	width: 250px;
@@ -236,39 +255,44 @@ h5 {
 	gap: 48px;
 }
 .restaurant-title {
-	font-size: 40px;
+	font-size: 28px;
 	max-width: 540px;
 	font-weight: 600;
-	margin-top: 20px;
+	margin-top: 32px;
+	color: white;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .restaurant-tags {
 	white-space: nowrap;
-	color: inherit;
+	color: whitesmoke;
 	opacity: 0.7;
 	font-size: 15px;
 	max-width: 540px;
 }
 .restaurant-details {
 	display: flex;
-	margin-top: 18px;
 	justify-content: space-between;
 	align-items: center;
 	font-size: 12px;
 	font-weight: 600;
 	padding-bottom: 10px;
-	color: inherit;
+	color: white;
 	font-weight: 600;
 	font-size: 16px;
 	max-width: 340px;
 }
+
+.restaurant-details > span {
+	background: red;
+	padding: 1px;
+	width: 51px;
+}
 .restaurant-rating {
 	display: flex;
-	align-items: center;
-	padding: 5px 8px;
-	gap: 5px;
-	background-color: var(--dark-green);
-	border-radius: 5px;
+
+	padding: 0px 6px;
+	gap: 0px;
+	background-color: white;
 }
 
 .restaurant-menu-content {
@@ -306,10 +330,10 @@ h5 {
 	/* background: #f0e8e869; */
 	margin-bottom: 14px;
 	/* border: 1px solid black; */
-	border-radius: 7px;
+	border-radius: 3px;
 	/* box-shadow: 1px 1px 10px black; */
-	background: #a9ff7438;
-	/* background: linear-gradient(to right, #c4c4c408, #ffffff); */
+	background: #d0f0ff4a;
+	border-bottom: 1px solid black; /* background: linear-gradient(to right, #c4c4c408, #ffffff); */
 }
 .menu-item:hover {
 	box-shadow: 1px 1px 10px black;
@@ -347,8 +371,6 @@ h5 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
-	width: 200px;
-	overflow: hidden;
 }
 .menu-item-img {
 	height: 100px;
@@ -356,14 +378,14 @@ h5 {
 	border-radius: 5px;
 }
 .add-btn {
-	color: var(--text-color);
-	padding: 8px 25px;
+	color: white;
+	padding: 6px 27px;
 	cursor: pointer;
 	outline: none;
 	border-color: var(--dark-orange);
 	margin-top: 10px;
 	border-radius: 5px;
-	background: floralwhite;
+	background: #ff0000;
 }
 
 .menu-title {
@@ -384,4 +406,121 @@ h5 {
 	border-radius: 18px;
 	width: fit-content;
 	box-shadow: 1px 1px 18px 3px black;
+}
+
+.quantity-container {
+	display: flex;
+
+	width: 32%;
+	margin: 0px auto;
+	margin-top: 10px;
+	gap: 7px;
+}
+
+.plus-btn {
+	border: none;
+	background-color: rgb(47, 255, 75);
+	color: white;
+}
+
+.plus-btn:hover {
+	box-shadow: 1px 1px 6px black;
+}
+.minus-btn {
+	border: none;
+	background-color: red;
+	color: white;
+}
+.minus-btn:hover {
+	box-shadow: 1px 1px 6px black;
+}
+
+.cartItems {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 38%;
+	margin: 17px auto;
+	padding: 10px;
+
+	border-radius: 13px;
+}
+.cartCount {
+	text-align: center;
+	margin: 0px auto;
+	margin-top: -3%;
+	color: white;
+	background: #000000;
+	width: 10%;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 35px;
+}
+.cart > h2 {
+	text-align: center;
+	margin-top: 8%;
+	font-size: xx-large;
+}
+.cart > h3 {
+	text-align: center;
+	border: 1px solid;
+	margin: 10px auto;
+	width: 11%;
+	padding: 15px;
+	color: red;
+}
+
+.itemCardContainer {
+	display: flex;
+	justify-content: space-between;
+	padding: 14px;
+	width: 94%;
+	background: #7fffd461;
+	border: 1px solid white;
+	border-radius: 10px;
+	margin: 10px;
+}
+.itemCardContainer > p {
+	font: small-caption;
+	font: small-caption;
+	/* border-left: 1px solid; */
+	padding-top: 4%;
+	padding-left: 14px;
+}
+
+.itemDetails {
+	min-width: 117px;
+	padding-left: 20px;
+	border-left: 1px solid;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding-block: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: auto;
+	width: 100%;
+}
+
+.noBorder {
+	border: none;
+}
+
+.aboutimg {
+	width: 50%;
+	height: 92vh;
+	margin: 0px auto;
+	margin-top: -80px;
+	image-rendering: pixelated;
+}
+.footer > h3 {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

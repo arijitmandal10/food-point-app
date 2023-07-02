@@ -9,14 +9,16 @@ import { Cart } from './pages/cart';
 import { Contact } from './pages/contact';
 import RestaurantMenu from './components/RestaurantMenu';
 import Error from './pages/error';
+import { Provider } from 'react-redux';
+import store from './utils/store';
 
 const AppLayout = () => {
 	return (
-		<>
+		<Provider store={store}>
 			<Navbar />
 			<Outlet />
 			<Footer />
-		</>
+		</Provider>
 	);
 };
 

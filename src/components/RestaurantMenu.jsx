@@ -3,11 +3,27 @@ import { swiggy_menu_api_URL, IMG_CDN_URL, ITEM_IMG_CDN_URL, MENU_ITEM_TYPE_KEY,
 import { MenuShimmer } from './Shimmer';
 import { useResMenu } from '../utils/useResMenu';
 import { useState } from 'react';
+// redux imports
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem, removeItem } from '../utils/cartSlice';
 
 const RestaurantMenu = () => {
 	const { id } = useParams(); // call useParams and get value of restaurant id using object destructuring
 	const [restaurant, menuItems] = useResMenu(swiggy_menu_api_URL, id, RESTAURANT_TYPE_KEY, MENU_ITEM_TYPE_KEY);
 	const [searchtext, setSearchtext] = useState('');
+
+	const dispatch = useDispatch();
+	const cartItems = useSelector((store) => store.cart.items);
+	console.log(cartItems);
+
+	// dispatching an addItem action
+	const handleAdd = (item) => {
+		dispatch(addItem(item));
+	};
+
+	const handleRemove = (item) => {
+		dispatch(removeItem(item.id));
+	};
 
 	return !restaurant ? (
 		<MenuShimmer />
@@ -22,18 +38,8 @@ const RestaurantMenu = () => {
 					</div>
 
 					<div className='restaurant-details'>
-						<div
-							className='restaurant-rating'
-							style={
-								restaurant?.avgRating < 4
-									? { backgroundColor: 'var(--light-red)' }
-									: restaurant?.avgRating === '--'
-									? { backgroundColor: 'white', color: 'black' }
-									: { color: 'red' }
-							}
-						>
-							<span>{restaurant?.avgRating}</span>⭐
-						</div>
+						<span>⭐{restaurant?.avgRating}</span>
+
 						<div className='restaurant-rating-slash'>|</div>
 						<div>{restaurant?.sla?.slaString}</div>
 						<div className='restaurant-rating-slash'>|</div>
@@ -74,7 +80,21 @@ const RestaurantMenu = () => {
 										{item?.imageId && (
 											<img className='menu-item-img' src={ITEM_IMG_CDN_URL + item?.imageId} alt={item?.name} />
 										)}
-										<button className='add-btn'> ADD +</button>
+										{cartItems.some((cartItem) => cartItem.id === item.id) ? ( // Check if the current item's id exists in cartItems
+											<div className='quantity-container'>
+												<button className='minus-btn' onClick={() => handleRemove(item)}>
+													-
+												</button>
+
+												<button className='plus-btn' onClick={() => handleAdd(item)}>
+													+
+												</button>
+											</div>
+										) : (
+											<button className='add-btn' onClick={() => handleAdd(item)}>
+												ADD +
+											</button>
+										)}
 									</div>
 								</div>
 							))}

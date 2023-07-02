@@ -1,7 +1,9 @@
+import about from '../images/about.png';
+
 export const About = () => {
 	return (
 		<>
-			<h1>ABOUT PAGE</h1>
+			<img className='aboutimg' src={about} alt='image' />
 		</>
 	);
 };
