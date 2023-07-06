@@ -1,20 +1,37 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { clearCart } from '../utils/cartSlice';
 import CartItemCard from '../components/CartItemCard';
 
 export const Cart = () => {
 	const cartItems = useSelector((store) => store.cart.items);
+	const dispatch = useDispatch();
+
+	const handleClearCart = () => {
+		dispatch(clearCart());
+	};
+
 	return (
 		<div className='cart'>
-			<h4 className='cartCount'>🛒 - {cartItems.length}</h4>
+			{cartItems.length !== 0 ? (
+				<div className='cart-top'>
+					{' '}
+					<h4 className='cartCount'>🛒 - {cartItems.length}</h4>
+					<button onClick={handleClearCart}>🧹</button>
+				</div>
+			) : (
+				''
+			)}
 			<div className='cartItems'>
 				{cartItems.map((items) => (
 					<CartItemCard key={items.id} {...items} />
 				))}
 			</div>
 			{cartItems.length !== 0 ? (
-				<h3>Total Price- &#8377;{cartItems.reduce((acc, curr) => acc + (curr.price || curr.defaultPrice), 0) / 100}</h3>
+				<>
+					<h3>Total Price- &#8377;{cartItems.reduce((acc, curr) => acc + (curr.price || curr.defaultPrice), 0) / 100}</h3>
+				</>
 			) : (
-				<h2>OOps!! Your cart is empty☹️</h2>
+				<h2>Oops!! Your cart is empty☹️</h2>
 			)}
 		</div>
 	);

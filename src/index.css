@@ -447,8 +447,8 @@ h5 {
 }
 .cartCount {
 	text-align: center;
-	margin: 0px auto;
-	margin-top: -3%;
+	/* margin: 0px auto; */
+	/* margin-top: -3%; */
 	color: white;
 	background: #000000;
 	width: 10%;
@@ -464,7 +464,7 @@ h5 {
 .cart > h3 {
 	text-align: center;
 	border: 1px solid;
-	margin: 10px auto;
+	margin: 10px auto 120px auto;
 	width: 11%;
 	padding: 15px;
 	color: red;
@@ -515,15 +515,156 @@ h5 {
 }
 
 .aboutimg {
-	width: 50%;
-	height: 92vh;
+	width: 100%;
+	height: 100vh;
 	margin: 0px auto;
-	margin-top: -80px;
+	margin-top: -78px;
 	image-rendering: pixelated;
 }
 .footer > h3 {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.cart-top {
+	display: flex;
+	justify-content: flex-end;
+	gap: 37%;
+	padding-inline: 32%;
+	/* margin-right: 100px; */
+	border-bottom: 2px solid;
+}
+
+.cart-top > button {
+	/* height: 46px; */
+	margin: auto 0px;
+	border: none;
+	background: transparent;
+	/* color: #dd00ff; */
+	padding: 2px;
+	font-size: 35px;
+	border-radius: 10px;
+	/* border: 1px solid; */
+	border-radius: 29px;
+}
+.cart-top > button:hover {
+	box-shadow: 0px 4px 11px #a30b0b;
+}
+
+/* contact.css */
+
+#contact-container {
+	width: 84%;
+	box-shadow: 1px 1px 14px black;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0px auto;
+	background: blanchedalmond;
+}
+
+#contact-form-container {
+	flex: 1;
+	text-align: -webkit-center;
+}
+
+#contact-form {
+	width: 57%;
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 46px;
+	/* margin-top: 28px; */
+	gap: 10px;
+}
+
+#contact-form > input {
+	padding: 12px;
+	width: 29rem;
+	border: none;
+	border-radius: 7px;
+}
+
+.form-input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+#input-message {
+	resize: vertical;
+	font-family: emoji;
+	height: 87px;
+	border-radius: 10px;
+}
+
+.sub-btn {
+	padding: 10px 20px;
+	background-color: #2857a4;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#my-details-container {
+	flex: 1 1;
+	padding: 15px 9%;
+}
+
+#my-details-container > h4 {
+	font-size: larger;
+}
+#my-details-container > p > a {
+	color: rgb(255 0 0);
+	text-decoration: auto;
+}
+#my-details-container > p {
+	font-family: auto;
+}
+
+.my-details-info-container {
+	margin-bottom: 10px;
+	font-family: auto;
+}
+
+.my-details-info-container i {
+	margin-right: 10px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.social-icons {
+	margin-top: 20px;
+}
+
+.horizontal-list {
+	list-style: none;
+	padding: 0;
+	margin: 20px;
+	display: flex;
+	gap: 56px;
+	justify-content: center;
+}
+
+.horizontal-list li {
+	margin: 0 5px;
+}
+
+.horizontal-list li:hover {
+	box-shadow: 1px 1px 11px black;
+	border-radius: 33px;
+}
+
+.horizontal-list li a img {
+	width: 30px;
+	height: 30px;
+}
+
+/* Additional styling can be added as per your requirements */
 
 @media screen and (max-width: 800px) {
 	.menu-items-list {
