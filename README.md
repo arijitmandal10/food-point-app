@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+I apologize for the oversight. Here's an updated README.md file that includes the libraries, technologies, and hooks used in the Food Point React project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```markdown
+# Food Point
 
-## Available Scripts
+Food Point is a React-based web application that allows users to explore and order food from various restaurants. This project provides a user-friendly interface to browse restaurants, view their menus, and add items to the cart for ordering.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- React: A JavaScript library for building user interfaces.
+- React Router: A library for declarative routing in React applications.
+- Redux Toolkit: A library for state management in React applications.
+- react-redux: Official React bindings for Redux, used to connect React components with the Redux store.
+- CSS: Cascading Style Sheets for styling the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Hooks Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- useState: A React hook used for managing local component state.
+- useEffect: A React hook used for performing side effects, such as data fetching and subscribing to state changes.
 
-### `npm test`
+## Folder Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project follows the following folder structure:
 
-### `npm run build`
+```
+/public
+/src
+  /components
+    - Body.js
+    - CartItemCard.js
+    - Footer.js
+    - Navbar.js
+    - NoRestaurants.js
+    - RestaurantCard.js
+  /pages
+    - About.js
+    - Cart.js
+    - Contact.js
+    - Error.js
+  /utils
+    - cartSlice.js
+    - store.js
+    - useOnline.js
+    - useResMenu.js
+    - useRestaurants.js
+/App.js
+/index.js
+/index.css
+/config.js
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Body.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The `Body` component renders the main content of the application, including the search bar, list of restaurants, and conditional rendering based on search results.
 
-### `npm run eject`
+### CartItemCard.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The `CartItemCard` component represents a single item card in the cart, displaying the item image, name, description, and quantity.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Footer.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The `Footer` component renders the footer section of the application, displaying the copyright information.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Navbar.js
 
-## Learn More
+The `Navbar` component displays the navigation bar at the top of the application, including links to different pages, a cart icon with the number of items, and a login/logout button.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### NoRestaurants.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The `NoRestaurants` component renders a message when no restaurants are found based on the search criteria.
 
-### Code Splitting
+### RestaurantCard.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The `RestaurantCard` component represents a single restaurant card, displaying the restaurant image, name, cuisines, average rating, and other details.
 
-### Analyzing the Bundle Size
+## Redux Slice
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### cartSlice.js
 
-### Making a Progressive Web App
+The `cartSlice` slice contains actions and reducers for managing the cart state. It includes the following actions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `addItem`: Adds an item to the cart.
+- `clearCart`: Clears the cart by removing all items.
+- `removeItem`: Removes an item from the cart.
 
-### Advanced Configuration
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To run the Food Point React project locally, follow these steps:
 
-### Deployment
+1. Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```bash
+   git clone [[repository-url](https://github.com/arijitmandal10/food-point-app/)]
+   ```
 
-### `npm run build` fails to minify
+2. Navigate to the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   cd food-point-app
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to the Food Point project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Implement your changes.
+4. Commit and push your changes to your forked repository.
+5. Create a pull request to merge your changes into the main repository.
+
+Please ensure that your code follows the project's coding style and conventions.
+
+## License
+
+The Food Point project is licensed under the [MIT License](LICENSE).
+```
+
