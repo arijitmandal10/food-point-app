@@ -1,6 +1,6 @@
 I apologize for the oversight. Here's an updated README.md file that includes the libraries, technologies, and hooks used in the Food Point React project:
 
-```markdown
+
 # Food Point
 
 Food Point is a React-based web application that allows users to explore and order food from various restaurants. This project provides a user-friendly interface to browse restaurants, view their menus, and add items to the cart for ordering.
@@ -22,7 +22,7 @@ Food Point is a React-based web application that allows users to explore and ord
 
 The project follows the following folder structure:
 
-```
+
 /public
 /src
   /components
@@ -47,7 +47,7 @@ The project follows the following folder structure:
 /index.js
 /index.css
 /config.js
-```
+
 
 ## Components
 
@@ -130,5 +130,5 @@ Please ensure that your code follows the project's coding style and conventions.
 ## License
 
 The Food Point project is licensed under the [MIT License](LICENSE).
-```
+
 
