@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import logo from '../images/logo.jpg';
 
 const Navbar = () => {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -15,10 +16,7 @@ const Navbar = () => {
 	return (
 		<nav>
 			<Link to='/'>
-				<img
-					src='https://cdn.vectorstock.com/i/preview-1x/54/55/restaurant-food-point-icon-map-pointer-symbol-vector-46625455.jpg'
-					alt='logo'
-				/>
+				<img src={logo} alt='logo' />
 			</Link>
 
 			<ul>

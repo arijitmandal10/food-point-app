@@ -524,3 +524,35 @@ h5 {
 .footer > h3 {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+@media screen and (max-width: 800px) {
+	.menu-items-list {
+		width: 80%;
+		margin: 0px auto;
+	}
+	.searchBar {
+		width: 80%;
+		margin: 0px auto;
+	}
+
+	.restaurant-summary {
+		padding-left: 97px;
+	}
+	nav {
+		display: flex;
+		/* justify-content: space-between; */
+		background-color: white;
+		/* padding-inline: 12em; */
+		/* padding-left: 20%; */
+		margin-bottom: 80px;
+		justify-content: center;
+		gap: 60px;
+		/* box-shadow: 0px 0px 9px 2px black; */
+	}
+	.restaurants {
+		/* display: flex; */
+		/* flex-wrap: wrap; */
+		margin-left: 10px;
+		/* justify-content: center; */
+	}
+}
