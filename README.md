@@ -1,6 +1,5 @@
-I apologize for the oversight. Here's an updated README.md file that includes the libraries, technologies, and hooks used in the Food Point React project:
 
-
+```markdown
 # Food Point
 
 Food Point is a React-based web application that allows users to explore and order food from various restaurants. This project provides a user-friendly interface to browse restaurants, view their menus, and add items to the cart for ordering.
@@ -22,7 +21,7 @@ Food Point is a React-based web application that allows users to explore and ord
 
 The project follows the following folder structure:
 
-
+```
 /public
 /src
   /components
@@ -47,7 +46,7 @@ The project follows the following folder structure:
 /index.js
 /index.css
 /config.js
-
+```
 
 ## Components
 
@@ -92,7 +91,7 @@ To run the Food Point React project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone [[repository-url](https://github.com/arijitmandal10/food-point-app/)]
+   git clone [[repository-url](https://github.com/arijitmandal10/food-point-app)]
    ```
 
 2. Navigate to the project directory:
@@ -114,7 +113,6 @@ To run the Food Point React project locally, follow these steps:
    ```
 
 
-
 ## Contributing
 
 Contributions are welcome! If you would like to contribute to the Food Point project, please follow these steps:
@@ -130,5 +128,5 @@ Please ensure that your code follows the project's coding style and conventions.
 ## License
 
 The Food Point project is licensed under the [MIT License](LICENSE).
-
+```
 
