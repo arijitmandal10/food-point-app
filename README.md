@@ -69,15 +69,22 @@ The project follows the following folder structure:
 - [react-toastify](https://fkhadra.github.io/react-toastify/): Library for displaying toast notifications in React applications.
 - [react-icons](https://react-icons.github.io/react-icons/): Library for adding icons to React applications.
 
-## Screenshots
+# Screenshots
 
-Include screenshots of your application here to provide a visual representation of the user interface.
+
+![Screenshot (27)](https://github.com/arijitmandal10/food-point-app/assets/114182784/addc9865-3f05-448c-bb21-0a42ae2989b4)
+![Screenshot (28)](https://github.com/arijitmandal10/food-point-app/assets/114182784/931c55a4-c71e-4766-b58b-1e03aeb7c4f1)
+
+![Screenshot (29)](https://github.com/arijitmandal10/food-point-app/assets/114182784/e556a4ef-0127-46b2-b8b5-ca2a89a18dc6)
+![Screenshot (30)](https://github.com/arijitmandal10/food-point-app/assets/114182784/2af91683-3a21-4fd0-a109-fa18137d4d6b)
+![Screenshot (31)](https://github.com/arijitmandal10/food-point-app/assets/114182784/b7d3decf-6038-42b6-b433-9e9e9df2448d)
+
+
 
 ## Deployed Link
 
 The Food Point web application is deployed and can be accessed using the following link:
-
-[https://food-point-example.com](https://food-point-example.com)
+[Food Point App](https://food-point-arijit.netlify.app/)
 
 ## Getting Started
 
