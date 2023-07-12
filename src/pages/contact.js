@@ -29,7 +29,7 @@ export const Contact = () => {
 				<div id='my-details-container'>
 					<h4>Get In touch</h4>
 					<p>
-						Thank you for visiting my portfolio! If you have any questions or would like to get in touch with me, please don’t
+						Thank you for visiting Food Point! If you have any questions or would like to get in touch with me, please don’t
 						hesitate to reach out. You can contact me by email at{' '}
 						<a href='mailto:arijitmandal999@gmail.com'>arijitmandal999@gmail.com</a>, by phone, or by filling out the contact form
 						below. I look forward to hearing from you!
