@@ -38,7 +38,7 @@ const Body = () => {
 				 Then, it maps over the filtered array and renders a <RestaurantCard /> component 
 				 for each restaurant that matches the filter criteria. */}
 
-				{searchtext && restaurants.every((restaurant) => !restaurant?.data?.name.toLowerCase().includes(searchtext)) && <NoRestaurants />}
+				{searchtext && restaurants.every((restaurant) => !restaurant?.info?.name.toLowerCase().includes(searchtext)) && <NoRestaurants />}
 
 				{/* In the above code, the restaurants.every() function checks if none of the restaurant names include the search text. 
 				If the search text is not empty and this condition is true, the <NoRestaurants> will be rendered within the div. */}
