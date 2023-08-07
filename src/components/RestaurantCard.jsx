@@ -1,6 +1,7 @@
 import { ITEM_IMG_CDN_URL } from '../config';
 
-export function RestaurantCard({ name, cuisines, cloudinaryImageId, avgRating, minDeliveryTime, costForTwoString }) {
+export function RestaurantCard({ name, cuisines, cloudinaryImageId, avgRating, sla, costForTwo }) {
+	const { deliveryTime } = sla;
 	return (
 		<div className='restaurantCard'>
 			<img src={ITEM_IMG_CDN_URL + cloudinaryImageId} alt='RestaurantIMG' />
@@ -12,7 +13,7 @@ export function RestaurantCard({ name, cuisines, cloudinaryImageId, avgRating, m
 				{' '}
 				<h5>⭐{avgRating}</h5> <h6>|</h6>
 				<h6>
-					{minDeliveryTime}mins &nbsp; | &nbsp; {costForTwoString}
+					{deliveryTime}mins &nbsp; | &nbsp; {costForTwo}
 				</h6>
 			</div>
 		</div>
