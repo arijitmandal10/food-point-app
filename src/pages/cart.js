@@ -3,7 +3,8 @@ import { clearCart } from '../utils/cartSlice';
 import CartItemCard from '../components/CartItemCard';
 
 export const Cart = () => {
-	const cartItems = useSelector((store) => store.cart.items);
+	const cartItemss = useSelector((store) => store.cart.items);
+	const cartItems = [...new Set(cartItemss)];
 	const dispatch = useDispatch();
 
 	const handleClearCart = () => {

@@ -1565,7 +1565,7 @@ export const shimmer_menu_card_unit = 4;
 
 // Swiggy API to get Restaurant data with corsproxy
 export const swiggy_api_URL =
-	'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.035280822533668&lng=77.55963755857057&page_type=DESKTOP_WEB_LISTING';
+	'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.035280822533668&lng=77.55963755857057&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
 
 // Swiggy API to get Restaurant Menu data with corsproxy
 export const swiggy_menu_api_URL =

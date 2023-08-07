@@ -26,11 +26,11 @@ const Body = () => {
 			<div className='restaurants'>
 				{restaurants
 					.filter((restaurant) => {
-						return searchtext.toLowerCase() === '' ? restaurant : restaurant.data?.name.toLowerCase().includes(searchtext);
+						return searchtext.toLowerCase() === '' ? restaurant : restaurant.info?.name.toLowerCase().includes(searchtext);
 					})
 					.map((restaurant, index) => (
-						<Link to={'/restaurant/' + restaurant.data.id} key={restaurant.data.id}>
-							<RestaurantCard {...restaurant.data} key={index} />
+						<Link to={'/restaurant/' + restaurant.info.id} key={restaurant.info.id}>
+							<RestaurantCard {...restaurant.info} key={index} />
 						</Link>
 					))}
 				{/* In summary, this code filters the "restaurants" array based on the search text.

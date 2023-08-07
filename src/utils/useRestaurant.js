@@ -11,7 +11,7 @@ export const useRestaurant = () => {
 	async function swiggyRestaurants() {
 		const data = await fetch(swiggy_api_URL);
 		const json = await data.json();
-		setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+		setRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 	}
 
 	console.log(restaurants);
